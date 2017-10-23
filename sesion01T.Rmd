@@ -1,0 +1,394 @@
+---
+title: "T1. Introducción a la estadística y la modelización estadística de datos experimentales"
+bibliography: Biotecnologia.bib
+---
+
+**Resumen: En este tema se introducen los conceptos básicos en el tratamiento estadístico de datos experimentales. Veremos los conceptos necesarios para el resto de temas de la materia, y trataremos con los primeros ejemplos de datos experimentales identificando los conceptos teóricos que vamos introduciendo.**
+
+
+# Introducción
+
+La importancia de la estadística dentro del campo experimnetal siempre ha sido muy relevante, ya que para poder extraer conclusiones de un conjunto de datos experimentales se hace necesaria la utilización de procedimientos estadísticos más o menos sofisticados. Con la irrupción de los ordenadores personales y de los programas estadísticos para legos en la materia, así como la explosión tecnológica que estamos viviendo en los últimos años, la importancia de un correcto estudio estadístico de los datos experimentales se hace más necesaria que nunca. Se siguen poublicando trabajos de investigación basados en datos experimnetales donde el tratamiento estadístico de la información allí recogida puede considerarse como decepcionante. Con esta materia pretendenmos guiar al estudiante en un correcto uso y análsis de las técnicas estadísticas más habituales en los diseños experimentales.
+
+El tratatamiento estadístico de datos experimentales se puede caracterizar en dos grandes areas: *estudios descriptivos* y *análisis y modelización*. Los estudios descriptivos se centran en el procesado de los datos experimentales obtenidos con el objetivo de establecer o reflejar posibles patrones o tendencias en su comportamiento. Se engloban dentro de este ámbito todas la técnicas estadísticas que permiten los resúmenes numéricos y gráficos de la información observada, así como la detección de observaciones anómalas, la transformación y el filtrado de los datos experimentales. Sin embargo, los estudios descriptivos tienen la gran limitación de que sus resultados están circunscritos a los datos observados, y por tanto no se pueden generalizar a la población más general de la que se han obtenido. En el análisis y modelización se pretende generalizar los posibles patrones de comportamiento observados, en la fase descriptiva, mediante la construcción de modelos que nos permiten aproximar el comportamiento de datos experimentales no observados. Evidentemente la construcción de dichos modelos estadísticos no es una tarea rutinaria que debe tomarse a la ligera. La propia naturaleza de los datos observados puede dar una idea de los posibles modelos que se pueden utilizar, pero el modelo final obtenido es el resultados de un proceso iterativo de construcción, verificación y validación que puede resultar costoso en algunas situaciones.  
+
+La modelización estadística resulta relevante para representar el comportamiento de los datos experimentales de la forma más sencilla posible mediante modelos matemáticos donde se introduce de forma natural la incertidumbre de cualquier diseño experimental. Esta asigntura se centrará en la fase de modelización pero para poder llegar a comprender su naturaleza es necesario introducir primero los conceptos básicos de cualquier estudio estadístico, asi como los procedimientos de estadística descriptiva y el estudio de la aleatoriedad en los diseños experimentales.
+
+Este tema establece las definiciones básicas de cualquier estudio estadístico sobre diferentes ejemplos e introduce la nomenclatura básica de los modelos estadísticos que estudiaremos más adelante.
+
+> *Usar la estadística no necesariamente es sinónimo de utilizar palabras raras o de hacer cálculos complicados. Significa que deseamos ver la realidad de forma objetiva, a través de datos que reflejen de la mejor manera posible qué es lo que está ocurriendo. Una vez se tienen los datos hay que saber sacarles la información y saberla plasmar de forma clara y convincente.*
+
+
+# Conceptos básicos en el análisis de datos experimentales
+
+En esta sección presentamos los conceptos básicos que utilizaremos a lo largo de la materia. Se trata unicamente de un resumen muy esquemática, pero nos sirve para sentar las bases de los temas siguientes. 
+
+## Objetivo del diseño experimental
+
+El objetivo de cualquier diseño experimental es aquellos que pretendemos estudiar en función del tipo de información que se ha recogido y del tipo de premisas establecidas antes de la recolección de los datos. Además es impotante establecer el número de repeticiones del experimento que vamos a realizar, ya que eso condicionará el análisis de dichos datos. Si nuestro diseño experimental es muy complejo puede ocurrir que plantemos más de un objetivo.
+
+> **Ejemplo** *Se va a realizar  un experimento para conocer el tiempo que tarda en degradarse un compuesto orgánico. En este caso nuestro objetivo es el tiempo hasta la degradación. Si el experimneto considera diferentes tipos de compuestos nuestro objetivo podría ser comparar el tiempo de degradación en función del tipo de compuesto *
+
+
+## Población y muestra
+
+Se define la población como el conjunto de sujetos u objetos que son de interés para el objetivo u objetivos planteados en nuestro diseño experimental. EL problema principal es que la población de sujetos u objetos suele ser demasiado grande para poder analizarla de forma completa, y por tanto debemos acudir a un subconjunto de dicha población para llevar a cabo nuestro diseño experimental.
+
+Se define la muestra como el subconjunto de la población a la que accedemos para obtener la información necesaria de cara a responder de la forma más precisa posible al objetivo u objetivos  planteados.
+
+## Medidas y escalas de medida
+
+Una medida es un número o atributo que se puede calcular para cada uno de los miembros de la población que está relacionado directamente con el objetivo de interés de la investigación. El conjunto de medidas obtenidas para cada uno de los elementos muestrales se denominan datos muestrales. 
+
+EL conjunto de medidas que se pueden observar y registrar para un conjunto de sujetos u objetos bajo investigación se denominan variables. Por tanto, una variable es el conjunto de valores que puede tomar cierta característica de la población sobre la que se realiza el estudio estadístico. Se distinguen dos tipos que pasamos a describir a continuación.
+
+### Variables cualitativas 
+
+Son el tipo de variables que como su nombre lo indica expresan distintas cualidades, características o modalidad. Cada modalidad que se presenta se denomina atributo o categoría, y la medición consiste en una clasificación de dichos atributos. Las variables cualitativas pueden ser dicotómicas cuando sólo pueden tomar dos valores posibles, como sí y no, hombre y mujer o ser politómicas cuando pueden adquirir tres o más valores. Dentro de ellas podemos distinguir: 
+
+i) **Variable cualitativa ordinal**: La variable puede tomar distintos valores ordenados siguiendo una escala establecida, aunque no es necesario que el intervalo entre mediciones sea uniforme, por ejemplo: leve, moderado, fuerte. 
+ii) **Variable cualitativa nominal**: En esta variable los valores no pueden ser sometidos a un criterio de orden, como por ejemplo los colores.
+
+
+### Variables cuantitativas
+
+Son las variables que toman como argumento cantidades numéricas. Las variables cuantitativas además pueden ser:
+
+i) **Variable discreta**: Es la variable que presenta separaciones o interrupciones en la escala de valores que puede tomar. Estas separaciones o interrupciones indican la ausencia de valores entre los distintos valores específicos que la variable pueda asumir. Ejemplo: El número de hijos (1, 2, 3, 4, 5). En muchas ocasiones una variable cualitativa ordinal puede ser interpretada como una variable discreta asociando a las categorías de la variable valores numéricos respetando el orden o escala establecida. Por ejemplo a la escala leve, moderado y fuerte le podríamos asociar la escala 1, 2 y 3 para mantener el orden.  
+ii) **Variable continua**: Es la variable que puede adquirir cualquier valor dentro de un intervalo especificado de valores. Por ejemplo el peso (2,3 kg, 2,4 kg, 2,5 kg,...), la altura (1,64 m, 1,65 m, 1,66 m,...), o el salario. Solamente se está limitado por la precisión del aparato medidor, en teoría permiten que existan valores infinitos entre dos valores observados.
+
+De forma habitual, la estructura de cualquier banco de datos (asociado a un diseñop experimental) tiene una estructura matricial donde en las filas se colocan los sujetos bajo estudio y en las columnas se sitúan las variables medidas para cada uno de ellos.
+
+Asociadao a cada variable de nuestro banco de datos se puede establecer lo que conocemos como parámetro o parámetros de interés de la variable. 
+
+> **Ejemplo.** *Para el diseño experimental del estudio de la degradación del compuesto orgánico la variable de interés es de tipo continuo y viene dada por el tiempo de degradación asociado a cada repetición del experimento. Sin embargo, a la hora de extraer conclusiones no podemos presentar todo el conjunto de datos sino que recurrimos a un resumen de dichos datos.*
+
+
+Asociado a cada variable se puede establecer lo que conocemos como parámetro o parámetros de interés de la variable. En el ejemplo anterior el parámetro de interés es el tiempo medio de degradación. Dado que generalemnte no es posible examinar toda la población y debemos recurrir a una muestra de dicha población, es imposible conocer el verdadero valor del parámetro asociado con dicha variable. Para sortear este problema definimos el *estadístico* como una realización del parámetro para los datos muestrales observados. Por tanto el valor del estadístico (denominado estimación) varia entre dos muestras de las misma población. Cuanto mayor es la muestra más se parecera el valor del estadístico al del parámetro.
+
+> **Ejemplo.** *Para el diseño experimental del estudio de la degradación del compuesto orgánico el parámetro poblacional de ineterés es el tiempo medio de degradación, mientras que el estadístico es la media del tiempo de degradación observado para los sujetos de la muestra. Distinguimos entonces entre media poblacional (parámetro) y media muestral (estadístico).*
+
+
+En ocasiones ocurrirá que el número de parámetros asociado con una variable no es único, ya que se pueden establecer varaios parámetros para estudiar el comportamiento de una variable. En el caso de variables de tipo cuantitativo siempre existen dos parámetros de interés: la media y la desviación típica. El primero nos indica como se sitúan los datos mientars que el segundo nos indica como se reparten los datos muestrales alrededor de la media. Veremos con más detalles todo este tipo de relaciones en los temas siguientes.
+
+# Bancos de datos de ejemplos   
+  
+A continuación se presentan el conjunto de ejemplos con los que iremos trabajando en las dos primeras unidades del curso. En las tablas de los anexos se pueden ver una parte de los datos de cada uno de los ejmemplos que aparecen a continuación.
+  
+### Ejemplo 1 [@Krzanowski98].
+
+*Un hospital está llevando a cabo un procedimiento de rutina en los pacientes ingresados para detectar niveles plásmáticos de colesterol total (en mg/ml) excesivamente altos. Más concretamente el estudio se centra en un grupo de 24 pacientes con **hiperlipoproteinemia**, que es un trastorno metabólico caracterizado por niveles elevados de lipoproteínas en la sangre que pueden asociarse con enfermedad coronaria. Se sospecha además que la edad puede tener cierta relevancia en los niveles de colesterol en sangre para este tipo de pacientes. En la Tabla 1 del anexo A se pueden ver los datos correspondientes a este conjunto de pacientes* 
+
+### Airquality [@ChamCleKleTuk83]. 
+
+*Los datos para este ejemplo se obtuvieron del Departamento de Conservación del Estado de Nueva York (datos sobre el ozono) y del Servicio Meteorológico Nacional (datos meteorológicos). Los datos recogidos son las lecturas diarias de los siguientes valores de calidad del aire desde el 1 de mayo de 1973  y el 30 de septiembre de 1973 (153 días en total):*
+
+1. **Ozone:** *ozono medio en partes por billón de 13:00 a 15:00 horas en la Isla Roosevelt.*
+2. **Solar.R:** *Radiación solar en Langleys en la banda de frecuencia 4000-7700 Angstroms de 08:00 a 12:00 horas en Central Park.*
+3. **Wind:** *Velocidad media del viento en millas por hora a las 07:00 y las 10:00 horas en el Aeropuerto La Guardia.*
+4. **Temp:** *Temperatura máxima diaria en grados Fahrenheit en el Aeropuerto La Guardia.*
+5. **Month:** *Mes del año en código numérico.*
+6. **Temp:** *Día de la semana en código numérico.*
+
+
+### Esoph [@BreDay80]. 
+
+*Los datos para este ejemplo corresponden a un estudio caso-control de cáncer de esófago en Ille-et-Vilaine, Francia. Las características recogidas para un conjunto de 88 sujetos son *
+
+1. **Grupo de edad (agegp):** *25-34; 35-44; 45-54; 55-64; 65-74; 75+.*
+2. **Consumo de alcohol gm/día (alcgp):** *0-39; 40-79; 80-119; 120+ .*
+3. **Consumo de tabaco gm/día (tobgp):** *0-9; 10-19; 20-29; 30+.*
+4. **Número de casos (ncases):** *Número de casos.*
+5. **Número de controles (ncontrol):** *Número de controles.*
+
+
+### mpg. 
+
+*Este conjunto de datos contiene un subconjunto de los datos de economía de combustible que la EPA pone a disposición en http://fueleconomy.gov. Contiene solamente información sobre los modelos de vehículo que tuvieron una nueva versión cada año entre 1999 y 2008 - esto se utiliza habitualmenete como una aproximación para la popularidad del coche. El banco de datos está compuesto por 234 regitros co  información sobre 11 variables diferentes. Las variables consideradas son:*
+
+1. **manufacturer:** *Modelo de fabricante.*
+2. **model:** *Modelo de vehículo.*
+3. **displ:** *Desplazamiento del motor (en litros).*
+4. **year:** *Año de fabricación.*
+5. **cyl:** *Número de cilindros.*
+6. **trans:** *Tipo de transmisión.*
+7. **drv:** *Tipo de tracción (f = tracción delantera, r = tracción trasera, 4 = 4wd).*
+8. **cty:** *Millas en ciudad por galón.*
+9. **hwy:** *Millas en carretera por galón.*
+10. **fl:** *Tipo de combustible*
+11. **class:** *Tipo de vehículo.*
+
+
+### diamonds. 
+
+*Este conjunto contiene información sobre precios y otras características  de casi 54.000 diamantes. Las diez variables consideradas son:*
+
+1. **price:** *Precio de venta del diamante (en $).*
+2. **carat:** *Peso del diamante.*
+3. **cut:** *Calidad del corte (Regular, Bueno, Muy Bueno, Premium, Ideal).*
+4. **color:** *Color del diamante, de J (peor) a D (mejor).*
+5. **clarity:** *Una medida de la claridad del diamante (I1 (peor), SI1, SI2, VS1, VS2, VVS1, VVS2, IF (mejor)).*
+6. **x:** *Longitud en mm.*
+7. **y:** *Ancho en mm.*
+8. **z:** *Profundidad en mm.*
+9. **depth:** *Profundidad (porcentaje de profundidad total = z / media (x, y) = 2z / (x + y) (43-79)).*
+10. **table:** *Ancho de la parte superior del diamante respecto al punto más ancho.*
+
+### Puromycin [@Tre74]. 
+
+*El banco de datos de Puromycin contiene 23 mediciones sobre la velocidad de reacción enzimática frente a la concentración de sustrato para células tratadas o no tratadas con Puromicina. Las variables registradas son:*
+
+1. **conc:** *Concentración de sustrato en partes por millón (ppm).*
+2. **rate:** *Velocidad instántanea de reacción (recuentos/min/min).*
+3. **state:** *Estado (Tratatado o no tratado con Puromicina.*
+
+### NCBIRTH800 [@Daniel05] (pag. 56). 
+
+*El banco de datos presenta la información referida al nacimiento y mortalidad infantil de 800 niños nacidos en el estado de Carolina del Norte. Las variables consideradas en el estudio son:*
+
+1. **plural:** *Número de hijos nacidos del embarazo.*
+2. **sex:** *Sexo del bebe.*
+3. **mage:** *Edad de la madre.*
+4. **weeks:** *Semanas completas de gestación.*
+5. **marital:** *Estado matrimonial ("married"=1; "not married"=2).*
+6. **racemom:** *Raza de la madre ("other non white"=0,"White"=1,"Black"=2,"America indian"=3,"Chinese"=4,"Hawaiian"=5,"Filipino"=6,"Other asian"=7).*
+7. **hispmom:** *Madre de origen hispánico ("Cuban"=C,"Mexican"=M,"Non-Hispanic"=N,"Other"=O,"Puerto Rican"=P,"Central/South american"=S,"Not classificable"=U).*
+8. **gained:** *Peso ganado durante el embarazo (en libras).*
+9. **smoke:** *Madre fumadora ("Yes"=1,"No"=0).*
+10. **drink:** *Madre bebedora ("Yes"=1,"No"=0).*
+11. **tounces:** *Peso del bebe (en onzas).*
+12. **tgrams:** *Peso del bebe (en gramos).*
+13. **low:** *Bebe de poco peso ("Yes"=1,"No"=0).*
+14. **premie:** *Bebe prematuro ("Yes"=1,"No"=0).*
+
+### CHOLEST [@Daniel05] (pag. 206). 
+
+*Los datos corresponden a las mediciones de los niveles de colesterol de un grupo de 1000 sujetos. Las variables consideradas en el estudio son:*
+
+1. **SUBJ:** *Identificador del sujeto.*
+2. **CHOLEST:** *Nivel de colesterol.*
+
+### HEADCIR [@Daniel05] (pag. 297). 
+
+*Los datos corresponden a las mediciones de las cabezas de 1000 sujetos emparejados de dos a dos. Las variables consideradas en el estudio son:*
+
+1. **PAIR:** *Pareja de sujetos.*
+2. **SCA:** *.*
+3. **NC:** *.*
+
+### PCKDATA [@Daniel05] (pag. 297). 
+
+*Los datos corresponden a las mediciones de las niveles de la creatina fosfoquinasa para dos grupos de sujetos. En total hay 2010 sujetos y las variables consideradas en el estudio son:*
+
+1. **SUBJ:** *Sujeto.*
+2. **Grupo:** *Grupo al que se encuentra asignado cada sujeto del estudio ("A" o "B").*
+3. **cretine:** *Nivel de creatinina para cada sujeto.*
+
+### LSADATA [@Daniel05] (pag. 403). 
+
+*La información recogida corresponde a los datos sialicos ligados a los lípidos séricos. Se ha llevado a cabo un estudio para determinar si las mediciones de suero podrían ser de utilidad en la detección de cáncer de mama. Las mediciones son para cuatro poblaciones con un total de 1600 registros. Las variables consideradas son:*
+
+1. **OBSERV:** *Sujeto.*
+2. **Grupo:** *Grupo al que se encuentra asignado cada sujeto del estudio ("A", "B", "C", "D").*
+3. **sace:** *Nivel de suero para cada sujeto.*
+
+### SERUMCHO [@Daniel05] (pag. 404). 
+
+*Un grupo de varones adultos con edades comprendidas entre 30 y 65 años participaron en un estudio para investigar la relación entre el consumo de carne y el colesterol. Los sujetos fueron organizados en tres grupos de acuerdo a tres dietas diferentes con una duración de 20 semanas. Las variables consideradas son:*
+
+1. **SUBJ:** *Sujeto.*
+2. **Dieta:** *Tipo de dieta ("BEEF" = carne de vaca unicamente, "PORK" = carne de cerdo unicamente, "C" = carne de pollo y pescado unicamente).*
+3. **chol:** *Nivel de colesterol.*
+
+# ¿Qué hemos aprendido?
+
+1. Establece un par de objetivos para cada uno de los ejemplos anteriores.
+2. Identifica la varaible o variables de interés asociadas a los objetivos planteado en el punto anterior.
+3. Identifica (si es posible) los parámetros de interés asociados a cada una de las variables del punto anterior.
+
+# Modelos Estadísticos
+
+Cuando el investigador se plantea un diseño experimental y comienza con la recogida de datos es porque persigue el estudio de o verificación de un objetivo planteado sobre la población bajo estudio. Estos objetivos se suelen establecer en base a teorias o hipótesis que se desean verificar sobre le funcionamiento de la población bajo ciertas condiciones experimnetales. Por ejemplo:
+* Teorias que establezcan la posible relación entre dos características de la población.
+* Teorias que plateen la idea de comportamientos distinats para una característica de la población en función de una varaible que clasifica a los sujetos bajo estudio en diferentes grupos.
+
+Un primer paso en la modelización estadística es el planteamiento de una expresión matemática que represente el comportamiento general de la población bajo estudio teniendo en cuenta el diseño experimental establecido y el objetivo u objetivos que se desean verificar. Esto es lo que se conoce como **componente sistemática del modelo** y se centra unicamente en la parte controloda de nuestro diseño experimental. Por ejemplo, si nos planteamos como objetivo conocer la suma der dos números  todo el mundo conoce cual es la función matemática que permite obtener la suma de foma única. Esto se denomina función determonista pues siempre porporciona el mismo resultado si los valores de entrada sos iguales. Para poder establecer la parte sistemática del modelo es necesario fijar la variable  que se asocia al objetivo o hipótesis planteada (variable respuesta) y la variables o variables (variables predictoras) que se supone están relacionadas con ella a través de la función matemática planteada.
+
+> **Ejemplo** *Supongamos un diseño experimental donde tenemos una variable respuesta Y (las variables siempre se escriben en mayúcsculas) y una variable predictora, X. Si $\dot{Y}$ denota el comportamiento medio esperado de la variable respuesta, la parte sistemática del modelo vendrá dada por:*
+$$\dot{Y}=f(X)$$
+*donde $f$ es la función matemática que asumimos en la relación entre ambas variables.*
+
+Por otro lado, dado que cada uno de los individuos de la población puede mostrar un comportamiento propio, los datos muestrales de la variable respuesta pueden mostrar ciertas fluctuaciones para un mismo valor de la variable predictora. Estas fluctuacione spueden ser más o menos pronunciadas dependiendo de la varaibles que están siendo medidas. Es necesario introducir en el modelo este comportamiento fluctuante que denominamos **componente aleatoria del modelo**. Dichas fluctuaciones se denominan errores aleatorios y el establecimiento del modelo pasa por asumir la distribución de probabilidad que puede generarlos. Los m odeos estad´siticos no tratan de explicar este comportamiento aletprio sino que intentan reducir su impacto a la hora de obtener como se relaciona la respuesta con las predictiras. Cuanto mejor sea el modelo menor será el impacto de esta componente aletario y resultará más fácil contestar a los objetivos planteados en el diseño experimental.   
+
+> **Ejemplo** *Para el ejemplo anterior el modelo definitivo vendría dado por:*
+$$Y=f(X)+\epsilon$$
+*donde $\epsilon$ es la variable aleatoria para los errores cuya distrbución de probabildiad se asume que es $F$.*
+
+En función del tipo de variable respuesta, las predictoras, de la relación que se pueden establecer entre ellas a través de $f$, y del estableciemiento de las estructuras aleatorias $F$ para los errores tendremos diferentes tipos de modelos. A lo largo de esta materia veremos las diferentes posibilidades de modelización.
+
+## Fases en la construcción de un modelo
+
+En el establecimiento de un modelo estadístico debemos seguir los siguientes pasos:
+
+1. Fijar el objetivo o hipótesis del diseño experimental.
+2. Establecer la variable respuesta y la varaible o variables predictoras.
+3. En función del tipo de variables se considera una forma para $f$.
+4. Fijar la estructura de los errores aleatorios $F$.
+5. Obtención del modelo.
+6. Análisis de la componente aletoria.
+7. Validación del modelo.
+8. Predicción de la respuesta para valores prefijados de la variable o variables predictoras.
+
+# Anexo A. Bancos de datos
+
+```{r librerias,echo=FALSE,error=FALSE,warning=FALSE,message=FALSE}
+library(tidyverse)
+library(stringr)
+library(forcats)
+library(lubridate)
+library(magrittr)
+library(broom)
+library(datasets)
+```  
+
+
+## Ejemplo 1 
+
+En la tabla siguiente se muestra tanto la edad (en años) como el nivel de colesterol (mg/ml) de los pacientes con **hiperlipoproteinemia**.
+  
+```{r intro01,echo=FALSE,error=FALSE,warning=FALSE}
+edad <- c(46,57,22,22,28,29,20,25,43,63,49,34,52,28,57,40,52,24,30,36,33,48,58,50)
+nivel <- c(3.5,4.5,2.2,2.5,2.3,3.3,1.9,3.0,3.8,4.6,4.0,3.2,4.0,2.9,4.1,3.2,4.3,2.5,2.6,3.8,3.0,4.2,3.9,3.3)
+datos <- data.frame(edad=edad,nivel=nivel)
+datos
+```  
+  
+## Airquality 
+
+En la tabla siguiente se muestran las mediciones del banco de datos (153 registros) Airquality. 
+  
+```{r intro02,echo=FALSE,error=FALSE,warning=FALSE}
+data(airquality)
+airquality  
+```  
+
+## Esoph 
+
+En la tabla siguiente se muestran las mediciones del banco de datos Esoph. 
+  
+```{r intro03,echo=FALSE,error=FALSE,warning=FALSE}
+data(esoph)
+esoph  
+```  
+
+## mpg 
+
+En la tabla siguiente se muestran las mediciones del banco de datos mpg 
+  
+```{r intro04,echo=FALSE,error=FALSE,warning=FALSE}
+data(mpg)
+mpg  
+```  
+
+## diamonds 
+
+En la tabla siguiente se muestran las mediciones del banco de datos diamonds 
+  
+```{r intro05,echo=FALSE,error=FALSE,warning=FALSE}
+data(diamonds)
+diamonds 
+```  
+
+## Puromicyn 
+
+En la tabla siguiente se muestran las mediciones del banco de datos puromicyn 
+  
+```{r intro06,echo=FALSE,error=FALSE,warning=FALSE}
+data(Puromycin)
+Puromycin
+```  
+
+
+## NCBIRTH800 
+
+En la tabla siguiente se muestran las mediciones del banco de datos NCBIRTH800 en las 9 primeras varaibles 
+  
+```{r intro07,echo=FALSE,error=FALSE,warning=FALSE}
+# NCBIRTH800
+NCBIRTH800=read_csv("https://goo.gl/mB9Jcn", col_types = "dcddcccdccddcc")
+# Recodificación del factor
+NCBIRTH800=NCBIRTH800 %>% mutate(sex=fct_recode(sex,"male"="1","female"="2"),marital=fct_recode(marital,"married"="1","not married"="2"),racemom=fct_recode(racemom,"other non white"="0","White"="1","Black"="2","America indian"="3","Chinese"="4","Hawaiian"="5","Filipino"="6","Other asian"="7","Other"="8"),hispmom=fct_recode(hispmom,"Cuban"="C","Mexican"="M","Non-Hispanic"="N","Other"="O","Puerto Rican"="P","Central/South american"="S","U"="Not classificable"),smoke=fct_recode(smoke,"Yes"="1","No"="0"),drink=fct_recode(drink,"Yes"="1","No"="0"),low=fct_recode(low,"Yes"="1","No"="0"),premie=fct_recode(premie,"Yes"="1","No"="0"))
+NCBIRTH800  
+```  
+
+## CHOLEST 
+
+En la tabla siguiente se muestran las mediciones del banco de datos CHOLEST 
+  
+```{r intro08,echo=FALSE,error=FALSE,warning=FALSE}
+CHOLEST=read_csv("https://goo.gl/b5ZAb1", col_types = "id")
+CHOLEST[1:10,] 
+```  
+
+
+## HEADCIR 
+
+En la tabla siguiente se muestran las mediciones del banco de datos HEADCIR 
+  
+```{r intro09,echo=FALSE,error=FALSE,warning=FALSE}
+HEADCIR=read_csv("https://goo.gl/juWJEu", col_types = "idd")
+HEADCIR
+```
+
+## PCKDATA 
+
+En la tabla siguiente se muestran las mediciones del banco de datos PCKDATA 
+  
+```{r intro10,echo=FALSE,error=FALSE,warning=FALSE}
+# PCKDATA 
+PCKDATA =read_csv("https://goo.gl/W8Bfgv", col_types = "idd")
+# Construimos la tabla donde cada fila recoje a un sujeto de cada tratamiento
+PCKDATAb = PCKDATA %>% gather(`A`,`B`, key = "Grupo", value = creatine)
+PCKDATAb
+``` 
+
+
+## LSADATA  
+
+En la tabla siguiente se muestran las mediciones del banco de datos LSADATA  
+  
+```{r intro11,echo=FALSE,error=FALSE,warning=FALSE}
+# LSADATA 
+SACEDATA =read_csv("https://goo.gl/FwMcTu", col_types = "idddd")
+# Construimos la tabla donde cada fila recoje a un sujeto de cada tratamiento
+SACEDATAb = SACEDATA %>% gather(`A`,`B`, `C`,`D`,key = "Grupo", value = sace)
+SACEDATAb 
+``` 
+
+## SERUMCHO  
+
+En la tabla siguiente se muestran las mediciones del banco de datos SERUMCHO  
+  
+```{r intro12,echo=FALSE,error=FALSE,warning=FALSE}
+# SERUMCHO 
+SERUMCHO =read_csv("https://goo.gl/ghxka2", col_types = "iddd")
+# Construimos la tabla donde cada fila recoje a un sujeto de cada tratamiento
+SERUMCHOb = SERUMCHO %>% gather(`BEEF`,`PORK`, `CHFISH`,key = "Dieta", value = chol)
+SERUMCHOb 
+``` 
+
+# Bibliografía
+
+<!--
+# References
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.2in}
+\setlength{\parskip}{8pt}
+\vspace*{-0.2in}
+\noindent
+-->
+
+```{r bib, include=FALSE}
+# KEEP THIS AT THE END OF THE DOCUMENT TO GENERATE A LOCAL bib FILE FOR PKGS USED
+knitr::write_bib(sub("^package:", "", grep("package", search(), value=TRUE)), file='skeleton.bib')
+```

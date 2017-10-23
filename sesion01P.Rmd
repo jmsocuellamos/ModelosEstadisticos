@@ -1,0 +1,27 @@
+---
+title: "P1. Puesta en marcha con R y RStudio"
+bibliography: Biotecnologia.bib
+---
+
+**Resumen: En este tema se introducen los conceptos básicos en el tratamiento estadístico de datos experimentales. Veremos los conceptos necesarios para el resto de temas de la materia, y trataremos con los primeros ejemplos de datos experimentales identificando los conceptos teóricos que vamos introduciendo.**
+
+
+# Introducción
+
+
+
+# Bibliografía
+
+<!--
+# References
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.2in}
+\setlength{\parskip}{8pt}
+\vspace*{-0.2in}
+\noindent
+-->
+
+```{r bib, include=FALSE}
+# KEEP THIS AT THE END OF THE DOCUMENT TO GENERATE A LOCAL bib FILE FOR PKGS USED
+knitr::write_bib(sub("^package:", "", grep("package", search(), value=TRUE)), file='skeleton.bib')
+```
