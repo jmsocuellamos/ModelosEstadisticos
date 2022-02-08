@@ -1,5 +1,0 @@
----
-title: "Sobre este curso"
----
-
-More about this website.
